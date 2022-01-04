@@ -1,4 +1,4 @@
-echo "INSTALL Waveshare 3.5inch RPI LCD (C) V2 on Volumio"
+echo "INSTALL Waveshare 3.5inch RPI LCD (C) on Volumio"
 
 rm -rf LCD-show
 
