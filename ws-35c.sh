@@ -40,7 +40,7 @@ EOF
 
 grep -q "dtparam=spi=on" /boot/userconfig.txt || \
   echo "dtparam=spi=on" >> /boot/userconfig.txt
-echo "dtoverlay=waveshare35c:rotate=270" >> /boot/userconfig.txt
+echo "dtoverlay=waveshare35c" >> /boot/userconfig.txt
 
 echo "SUCCESS"
 
