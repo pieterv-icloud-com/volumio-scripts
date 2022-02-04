@@ -48,4 +48,4 @@ echo "SUCCESS"
 
 echo "REBOOTING"
 
-sudo reboot
+reboot
