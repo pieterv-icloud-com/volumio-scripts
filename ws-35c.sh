@@ -10,11 +10,13 @@ git clone https://github.com/waveshare/LCD-show
 
 cp LCD-show/waveshare35c-overlay.dtb /boot/overlays/
 
-cp LCD-show/waveshare35c-overlay.dtb /boot/overlays/waveshare35c-overlay.dtb
+cp LCD-show/waveshare35c-overlay.dtb /boot/overlays/waveshare35c.dtbo
 
 cp -rf LCD-show/usr/share/X11/xorg.conf.d/99-fbturbo.conf /usr/share/X11/xorg.conf.d/99-fbturbo.conf
 
 cp -rf LCD-show/etc/X11/xorg.conf.d/99-calibration.conf-35c /etc/X11/xorg.conf.d/99-calibration.conf
+
+sed 's/"fbturbo"/"fbdev"/' -i /usr/share/X11/xorg.conf.d/99-fbturbo.conf
 
 cp -rf LCD-show/etc/X11/xorg.conf.d/99-calibration.conf-35c /usr/share/X11/xorg.conf.d/99-calibration.conf
 
@@ -40,7 +42,7 @@ EOF
 
 grep -q "dtparam=spi=on" /boot/userconfig.txt || \
   echo "dtparam=spi=on" >> /boot/userconfig.txt
-echo "dtoverlay=waveshare35c-overlay" >> /boot/userconfig.txt
+echo "dtoverlay=waveshare35c:rotate=270" >> /boot/userconfig.txt
 
 echo "SUCCESS"
 
