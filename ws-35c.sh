@@ -16,8 +16,6 @@ cp -rf LCD-show/usr/share/X11/xorg.conf.d/99-fbturbo.conf /usr/share/X11/xorg.co
 
 cp -rf LCD-show/etc/X11/xorg.conf.d/99-calibration.conf-35c /etc/X11/xorg.conf.d/99-calibration.conf
 
-sed 's/"fbturbo"/"fbdev"/' -i /usr/share/X11/xorg.conf.d/99-fbturbo.conf
-
 cp -rf LCD-show/etc/X11/xorg.conf.d/99-calibration.conf-35c /usr/share/X11/xorg.conf.d/99-calibration.conf
 
 cat <<'EOF' > /etc/X11/xorg.conf.d/99-calibration.conf
