@@ -1,4 +1,5 @@
-rm peppy_screensaver
+rm -rf peppy_screensaver
+rm peppy_screensaver.zip
 
 apt update
 
@@ -10,6 +11,8 @@ mkdir peppy_screensaver
 
 unzip peppy_screensaver.zip -d peppy_screensaver
 
-cd peppy_screensaver
+mv peppy_screensaver /home/volumio/
+
+cd /home/volumio/peppy_screensaver
 
 volumio plugin install
